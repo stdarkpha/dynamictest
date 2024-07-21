@@ -29,6 +29,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     env:  # Add environment variables here
+      BASE_URL: ${{ secrets.BASE_URL }}
       API_KEY: ${{ secrets.API_KEY }}
       AUTH_DOMAIN: ${{ secrets.AUTH_DOMAIN }}
       PROJECT_ID: ${{ secrets.PROJECT_ID }}
